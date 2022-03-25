@@ -21,7 +21,7 @@
         <input type="text" v-model="search" placeholder="Search here" />
 
         <label for="pagination">:perpage</label>
-        <select  v:model="currentEntries"  @change="paginationdata($event)" >
+        <select  @change="paginationdata($event)" >
           <option v-for="perpage of perpagerecords" :key="perpage">
             {{ perpage }}
           </option>
