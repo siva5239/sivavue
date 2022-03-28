@@ -16,6 +16,8 @@
            
 
     </ul> -->
+    <div class="container">
+    <div class="grid-container">
     <table class="table">
          <thead class="thead-light">
         <tr>
@@ -40,11 +42,12 @@
         <td>{{used.work1}}</td>
         <td>{{used.office}}</td>
         <td>{{used.fax}}</td>
-        <td><li>{{used.work}}</li></td>
-        <td><li>{{used.tags}}</li></td>
+        <td>{{used.work}}</td>
+        <td>{{used.tags}}</td>
         </tr>
     </table>
-    
+    </div>
+    </div>
 </div>
 </template>
 <script>
@@ -57,7 +60,9 @@ export default {
    },
    computed:{
      result(){
+         console.log(this.result)
         return this.$store.state.results 
+        
      }
    },
    mounted(){
@@ -70,4 +75,13 @@ export default {
    li{
        list-style: none;
    }
+   .grid-container{
+      
+        border: 2px ;
+         margin: 10px;
+        padding: 20px;
+        display: grid;
+         grid-template-columns: auto auto auto;
+   }
+  
 </style>
